@@ -63,7 +63,7 @@
 /* Heading */
 .hero .hero-heading {
   color: #fff;
-  font-family: var(--heading-font-family);
+  font-family: graphik-wide, var(--heading-font-family);
   font-size: 32px;
   font-weight: 900;
   line-height: 1.1;

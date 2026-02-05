@@ -215,7 +215,7 @@ button.secondary {
 
 main img {
   max-width: 100%;
-  width: auto;
+  width: 100%;
   height: auto;
 }
 
@@ -241,6 +241,28 @@ main img {
   height: auto;
 }
 
+/* List styling with arrow icon - only for main content, not blocks */
+main .default-content-wrapper ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+main .default-content-wrapper li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+main .default-content-wrapper li::before {
+  content: url('/icons/vector-right.png');
+  font-size: 16px;
+  height: 1em;
+  width: 1em;
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+}
+
 /* sections */
 main > .section {
   margin: 40px 0;
@@ -264,4 +286,18 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+/* Section 66 - 2/3 width centered layout */
+main .section.section-66 > div {
+  width: 66.67%;
+  margin-left: 16.67%;
+}
+
+@media (width >= 900px) {
+  main .section.section-66 > div {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
 }

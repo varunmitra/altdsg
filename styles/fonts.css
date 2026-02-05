@@ -1,4 +1,41 @@
 /* stylelint-disable max-line-length */
+
+/* Graphik - Primary brand font */
+@font-face {
+  font-family: graphik;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/Graphik-Regular-Web.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: graphik;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/Graphik-Bold-Web.woff2') format('woff2');
+}
+
+/* Graphik Wide - For hero headings */
+@font-face {
+  font-family: graphik-wide;
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('../fonts/GraphikWide-Black-Web.woff2') format('woff2');
+}
+
+/* DSG Icon Font */
+@font-face {
+  font-family: dsg-icons;
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('../fonts/dsg-icon-font.ttf') format('truetype');
+}
+
+/* Roboto - Fallback fonts */
 @font-face {
   font-family: roboto-condensed;
   font-style: normal;
