@@ -1,0 +1,46 @@
+/* Breadcrumbs Block */
+.breadcrumbs-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0 0;
+}
+
+.breadcrumbs li {
+  padding: 12px 5px 12px 0;
+  font-size: var(--body-font-size-xs);
+  color: var(--text-color);
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  content: '/';
+  margin-left: 5px;
+  color: var(--text-color);
+  opacity: 0.6;
+}
+
+.breadcrumbs li:last-child {
+  font-weight: 500;
+}
+
+.breadcrumbs a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}

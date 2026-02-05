@@ -25,7 +25,7 @@
 header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
-  z-index: 2;
+  z-index: 100;
   position: fixed;
 }
 
@@ -328,12 +328,15 @@ header nav .nav-account span {
    Level 4: Category Nav
    =========================================== */
 header nav .nav-categories {
+  --hmf-gray200: #e0dcd9;
+
   background-color: #fff;
   color: var(--header-text-dark);
   display: none;
   padding: 0 24px;
   min-height: var(--header-height-categories);
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid var(--hmf-gray200);
+  border-bottom: 1px solid var(--hmf-gray200);
 }
 
 @media (width >= 900px) {
