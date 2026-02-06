@@ -269,7 +269,7 @@ main > .section {
 }
 
 main > .section > div {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: auto;
   padding: 0 24px;
 }
@@ -298,6 +298,19 @@ main .section.section-66 > div {
   main .section.section-66 > div {
     max-width: 1024px;
     margin: 0 auto;
+    padding: 0 32px;
+  }
+}
+
+/* Section 80 - 1280px width centered layout */
+main .section.section-80 > div {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (width >= 900px) {
+  main .section.section-80 > div {
     padding: 0 32px;
   }
 }

@@ -1,0 +1,113 @@
+/* Author Block */
+.author-wrapper {
+  background-color: #e2d6b9;
+}
+
+.author {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.author .author-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (width >= 769px) {
+  .author .author-container {
+    min-height: 750px;
+  }
+}
+
+@media (width >= 900px) {
+  .author .author-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .author.image-right .author-container {
+    flex-direction: row;
+  }
+
+  .author.image-left .author-container {
+    flex-direction: row;
+  }
+}
+
+/* Image Section - 60% width */
+.author .author-image {
+  width: 100%;
+}
+
+@media (width >= 900px) {
+  .author .author-image {
+    flex: 0 0 60%;
+    width: 60%;
+  }
+}
+
+.author .author-image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.author .author-image img {
+  border-radius: 2px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+/* Text Section - 40% width */
+.author .author-text {
+  width: 100%;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+@media (width >= 900px) {
+  .author .author-text {
+    flex: 1;
+    width: auto;
+    padding: 48px 40px;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+
+/* Preserve authored text styles */
+.author .author-text h1,
+.author .author-text h2,
+.author .author-text h3,
+.author .author-text h4,
+.author .author-text h5,
+.author .author-text h6 {
+  margin-top: 0;
+}
+
+.author .author-text p {
+  margin-bottom: 1em;
+}
+
+.author .author-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Links in author block - reset default styles */
+.author .author-text a {
+  color: var(--header-green, #002a19);
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+  font-weight: inherit;
+}
+
+.author .author-text a:hover {
+  opacity: 0.7;
+}
