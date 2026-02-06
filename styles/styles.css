@@ -266,6 +266,9 @@ main .default-content-wrapper li::before {
 /* sections */
 main > .section {
   margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 main > .section > div {

@@ -1,8 +1,14 @@
 /* Cards Block */
+.cards-wrapper {
+  width: 100%;
+}
+
 .cards {
   max-width: 1600px;
   margin: 0 auto;
   padding: 0 24px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (width >= 900px) {
@@ -15,21 +21,26 @@
 .cards .cards-slider {
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
-/* Cards container */
+/* Cards container - Desktop: 4 column grid */
 .cards .cards-container {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  transition: transform 0.3s ease;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
 }
 
 /* Mobile/Tablet: slider mode */
 @media (width < 900px) {
   .cards .cards-container {
+    display: flex;
     flex-wrap: nowrap;
+    transition: transform 0.3s ease;
   }
 
   .cards .cards-card {
@@ -38,24 +49,14 @@
   }
 }
 
-/* Desktop: 4 column grid */
-@media (width >= 900px) {
-  .cards .cards-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-  }
-
-  .cards .cards-nav {
-    display: none;
-  }
-}
-
 /* Individual card */
 .cards .cards-card {
   display: flex;
   flex-direction: column;
-  background-color: #f5f3f1;
+  background-color: transparent;
+  max-width: 359px;
+  overflow: hidden;
+  margin-bottom: 24px;
 }
 
 /* Image bottom variant - reorder */
@@ -75,48 +76,62 @@
 
 .cards .cards-card-image img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 356 / 251;
   object-fit: cover;
 }
 
 /* Card body */
 .cards .cards-card-body {
-  padding: 20px 16px;
+  padding: 16px 8px;
   text-align: center;
-  flex: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 120px;
 }
 
 .cards .cards-card-body p {
-  margin: 0 0 12px;
+  margin: 0 0 8px;
   font-size: 14px;
   line-height: 1.5;
   color: var(--text-color);
+  text-align: center;
+  overflow-wrap: break-word;
+  width: 100%;
 }
 
 .cards .cards-card-body p:last-child {
   margin-bottom: 0;
 }
 
-/* Card title link */
+/* Card title/text link - override button styles */
 .cards .cards-card-body a {
   color: var(--header-green, #002a19);
-  font-size: 16px;
-  font-weight: 700;
-  text-decoration: underline;
+  font-size: 14px;
+  line-height: 1.5;
+  text-decoration: none;
   display: block;
-  margin-bottom: 12px;
   background: none;
   border: none;
+  border-radius: 0;
   padding: 0;
+  margin: 0;
+  text-align: center;
+  overflow-wrap: break-word;
+  width: 100%;
+  white-space: normal;
+  text-overflow: clip;
+  overflow: visible;
 }
 
 .cards .cards-card-body a:hover {
-  opacity: 0.7;
+  text-decoration: underline;
+  background: none;
 }
 
-/* Navigation arrows */
+/* Navigation arrows - mobile/tablet only */
 .cards .cards-nav {
   position: absolute;
   top: 50%;
@@ -145,4 +160,11 @@
 
 .cards .cards-nav:hover {
   background: #f5f5f5;
+}
+
+/* Hide navigation on desktop */
+@media (width >= 900px) {
+  .cards .cards-nav {
+    display: none;
+  }
 }
