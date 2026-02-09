@@ -1,20 +1,331 @@
+/* Footer Block */
 footer {
-  background-color: var(--light-color);
+  background-color: #002a19;
+  color: #fff;
   font-size: var(--body-font-size-xs);
+  padding-top: 140px; /* Space for CTA overlap */
+  position: relative;
+  z-index: 1;
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
-}
-
-footer .footer p {
+footer p {
+  color: #fff;
   margin: 0;
 }
 
+footer a {
+  color: #fff;
+}
+
+footer .footer {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+footer .footer-content {
+  padding: 0 24px 40px;
+}
+
 @media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+  footer .footer-content {
+    padding: 0 32px 40px;
   }
 }
+
+/* ===========================================
+   Section 1: Top Bar (Logo, Help, Customer Service)
+   =========================================== */
+footer .footer-top {
+  padding: 40px 0;
+  border-bottom: 1px solid rgb(255 255 255 / 20%);
+}
+
+footer .footer-top .default-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (width >= 900px) {
+  footer .footer-top .default-content-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Logo in footer */
+footer .footer-top .icon-logo-white {
+  width: auto;
+  height: auto;
+}
+
+footer .footer-top .icon-logo-white img {
+  width: 180px;
+  height: auto;
+}
+
+footer .footer-top p {
+  margin: 0;
+  color: #fff;
+}
+
+footer .footer-top strong {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+/* Info List (Self Help, Customer Service) */
+footer .footer-info-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (width >= 900px) {
+  footer .footer-info-list {
+    flex-direction: row;
+    gap: 48px;
+  }
+}
+
+footer .footer-info-list li {
+  margin: 0;
+  padding: 0;
+}
+
+footer .footer-info-list li::before {
+  display: none;
+}
+
+footer .footer-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+footer .footer-info-block strong {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+
+footer .footer-info-block span {
+  font-size: 14px;
+  color: #fff;
+}
+
+/* Footer top section links - grouped together */
+footer .footer-top a,
+footer .footer-info-block a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .footer-top a:hover,
+footer .footer-info-block a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================================
+   Section 2: Link Columns
+   =========================================== */
+footer .footer-links {
+  padding: 32px 0;
+}
+
+footer .footer-links-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (width >= 900px) {
+  footer .footer-links-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+}
+
+footer .footer-link-column {
+  width: 100%;
+}
+
+/* Accordion Styles */
+footer .footer-accordion {
+  border-bottom: 1px solid rgb(255 255 255 / 20%);
+}
+
+@media (width >= 900px) {
+  footer .footer-accordion {
+    border-bottom: none;
+  }
+}
+
+/* Accordion Header */
+footer .footer-accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  text-align: left;
+  margin: 0;
+  white-space: normal;
+  text-overflow: unset;
+  overflow: visible;
+}
+
+footer .footer-accordion-header:hover {
+  opacity: 0.8;
+}
+
+footer .footer-accordion-icon {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+@media (width >= 900px) {
+  footer .footer-accordion-header {
+    cursor: default;
+    padding: 0 0 16px;
+  }
+
+  footer .footer-accordion-icon {
+    display: none;
+  }
+}
+
+/* Accordion Content */
+footer .footer-accordion-content {
+  display: none;
+  padding-bottom: 16px;
+}
+
+footer .footer-accordion.is-open .footer-accordion-content {
+  display: block;
+}
+
+@media (width >= 900px) {
+  footer .footer-accordion-content {
+    display: block;
+    padding-bottom: 0;
+  }
+}
+
+/* Link Lists */
+footer .footer-accordion-content ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer .footer-accordion-content li {
+  margin-bottom: 12px;
+  padding-left: 0;
+  position: static;
+}
+
+footer .footer-accordion-content li::before {
+  display: none;
+}
+
+/* ===========================================
+   Section 3: Social Icons
+   =========================================== */
+footer .footer-social {
+  padding: 32px 0;
+  border-top: 1px solid rgb(255 255 255 / 20%);
+}
+
+footer .footer-social .default-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  text-align: center;
+}
+
+@media (width >= 900px) {
+  footer .footer-social .default-content-wrapper {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 24px;
+    text-align: right;
+  }
+}
+
+/* Social Links Container */
+footer .footer-social-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Footer links - grouped together for specificity */
+footer .footer-links .footer-accordion-content a,
+footer .footer-social-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .footer-social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  transition: opacity 0.2s ease;
+}
+
+footer .footer-links .footer-accordion-content a {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+footer .footer-links .footer-accordion-content a:hover,
+footer .footer-social-links a:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+footer .footer-social-links a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+/* SVG Icons */
+footer .footer-social-links svg {
+  width: 24px;
+  height: 24px;
+  color: #fff;
+}
+
+/* Tagline */
+footer .footer-social-tagline {
+  margin: 0 0 0 8px;
+  color: #fff;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Tagline with accent color */
+footer .footer-social-tagline strong {
+  color: #e3ff36;
+}
+

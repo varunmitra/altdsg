@@ -317,3 +317,15 @@ main .section.section-80 > div {
     padding: 0 32px;
   }
 }
+
+/* CTA section - remove padding/margin to allow footer overlap */
+main > .section:has(.cta-wrapper) {
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+}
+
+main > .section:has(.cta-wrapper) > div {
+  padding: 0;
+  max-width: none;
+}
